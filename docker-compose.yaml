@@ -1,0 +1,10 @@
+version: "1"
+services:
+  tado_aa:
+    image: tado_api_token:latest
+    container_name: tado_api_token
+    volumes:
+      - /home/pi/Docker/homepage:/app/tado_api_token
+    env_file:
+      - ./stack.env
+    restart: unless-stopped
