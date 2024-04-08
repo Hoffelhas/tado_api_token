@@ -43,7 +43,7 @@ def refresh(refresh_token):
 
 # Update token in the docker homepage services.yaml to use in the custom API
 def update_tado_key_in_yaml_service(access_token):
-   with open("homepage/services.yaml", "r") as f:
+   with open("services.yaml", "r") as f:
       data = yaml.safe_load(f)
       new_key = 'Bearer ' + access_token
       data[0]['Services'][2]['Tado']['widget']['headers']['Authorization'] = new_key
