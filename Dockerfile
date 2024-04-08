@@ -13,4 +13,4 @@ RUN cd /tado_api_token
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Run script.py when the container launches
-CMD ["python", "-u", "/tado_api_token/refresh_tado_api_token.py"]
+CMD ["python", "-u", "./refresh_tado_api_token.py"]
