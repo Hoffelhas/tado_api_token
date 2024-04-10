@@ -48,7 +48,7 @@ def update_tado_key_in_yaml_service(access_token):
       new_key = 'Bearer ' + access_token
       data[0]['Services'][2]['Tado']['widget']['headers']['Authorization'] = new_key
    # Writing a new yaml file with the modifications
-   with open("services.yaml", "w") as f:
+   with open("/homepage/services.yaml", "w") as f:
       yaml.dump(data, f)
 
 access_token, refresh_token = initialise()
